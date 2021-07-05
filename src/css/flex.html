@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      .scroll-box {
+        height: 400px;
+        overflow-y: auto;
+      }
+      .container {
+        display: flex;
+        height: 1900px;
+      }
+      .item {
+        flex: 1;
+      }
+      .item:first-child {
+        width: 200px;
+        background: red;
+      }
+      .item:nth-child(2) {
+        width: 500px;
+        background: yellow;
+      }
+      .item:nth-child(3) {
+        width: 900px;
+        background: blue;
+      }
+    </style>
+    <script>
+      const test = function() {
+        console.log('刚刚执行了方法test哦')
+      }
+      function onClick() {
+        test()
+        console.log('刚刚我被点击了哦')
+      }
+      test()
+    </script>
+    <script type="text/javascript" src="./debounce.js"></script>
+  </head>
+  <body>
+    <div class="scroll-box" onclick="onClick()">
+      <div class="container">
+        <div class="item">
+          1
+        </div>
+        <div class="item">
+          1
+        </div>
+        <div class="item">
+          1
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
