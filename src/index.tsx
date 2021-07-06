@@ -1,10 +1,23 @@
-import { Router, Route, useLocation, useHistory } from './react-router/index.js'
 import React from 'react'
+import { Router, Route, useLocation, useHistory } from './react-router/index.js'
 import ReactDOM from "react-dom"
 
 function PageCompoennt({ children}: any) {
-  debugger
-  return children
+
+  const history = useHistory()
+
+  const  handleClick = (pathname: string) => {
+    history.push(pathname)
+  }
+
+  return <div>
+    <div>
+      <span onClick={() => handleClick('/a')}>页面A</span>
+      <span onClick={() => handleClick('/b')}>页面B</span>
+      <span onClick={() => handleClick('/c')}>页面C</span>
+    </div>
+    {children}
+  </div>
 }
 
 export function App() {
@@ -16,7 +29,7 @@ export function App() {
       <Route pathname="/b">
         <PageCompoennt>这是页面B</PageCompoennt>
       </Route>
-      <Route pathname="/C">
+      <Route pathname="/c">
         <PageCompoennt>这是页面C</PageCompoennt>
       </Route>
       <Route pathname="/">

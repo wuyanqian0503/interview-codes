@@ -1,4 +1,4 @@
-import React, {useState} from 'React'
+import React, {useState, useEffect} from 'React'
 import { history } from './history.js'
 
 export const RouterContext = React.createContext(null);
@@ -14,10 +14,10 @@ export function Router({children}) {
     return unListen
   }, [])
 
-  return <RouterContext.Provider value={
-    location,
-    history
-  }>
+    return <RouterContext.Provider value={{
+      location,
+      history
+    }}>
     {children}
   </RouterContext.Provider>
 }

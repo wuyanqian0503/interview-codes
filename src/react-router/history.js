@@ -30,6 +30,9 @@ const listen = function (fn) {
 }
 
 export const history = {
+  get location() {
+    return location;
+  },
   push,
   listen,
 }

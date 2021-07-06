@@ -70,6 +70,14 @@ const config = {
     extensions: ['.tsx', '.ts', '.js'],
   },
 
+  devServer: {
+    contentBase: path.join(__dirname, 'dist'),
+    compress: true,
+    port: 9000,
+    index: 'index.html',
+    historyApiFallback: true
+  },
+
 
 }
 

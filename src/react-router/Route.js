@@ -1,11 +1,12 @@
-import {RouterContext} from './Router.js'
+import { RouterContext } from './Router.js'
 import React from "react"
 
 export function Route ({pathname = '/', children}) {
-  const { location } = React.useContext(RouterContext);
-  debugger
+  const contextValue = React.useContext(RouterContext);
 
-  if(pathname === location.pathname) {
+  console.log("contextValue", contextValue)
+
+  if(pathname === contextValue.location.pathname) {
     return children
   }
   return null

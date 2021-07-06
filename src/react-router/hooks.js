@@ -1,11 +1,12 @@
 import { RouterContext } from "./Router.js"
+import React from 'react'
 
 export function useHistory() {
-  const { history } = useContext(RouterContext);
+  const { history } = React.useContext(RouterContext);
   return history
 }
 
 export function useLocation() {
-  const { location } = useContext(RouterContext);
+  const { location } = React.useContext(RouterContext);
   return location
 }
