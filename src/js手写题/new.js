@@ -10,7 +10,7 @@ function newFactory(ctor, ...args) {
   }
 
   const obj = Object.create()
-  obj.__proto__ = Object.create(ctor.prototype)
+  obj.__proto__ = ctor.prototype
   const result = ctor.apply(obj, ...args)
 
   const isFunction = typeof result === 'function'
@@ -18,3 +18,6 @@ function newFactory(ctor, ...args) {
 
   return isObject || isFunction ? result : obj
 }
+
+
+
