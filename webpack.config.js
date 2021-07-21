@@ -73,7 +73,7 @@ const config = {
   devServer: {
     contentBase: path.join(__dirname, 'dist'),
     compress: true,
-    port: 9000,
+    port: 7080,
     index: 'index.html',
     historyApiFallback: true
   },
