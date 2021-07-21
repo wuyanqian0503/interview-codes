@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'React'
+import React, {useState, useEffect} from 'react'
 import { history } from './history.js'
 
 export const RouterContext = React.createContext(null);
